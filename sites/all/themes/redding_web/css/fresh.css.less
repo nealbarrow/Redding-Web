@@ -1,0 +1,576 @@
+/* ///////////////////////////////////////////////////////////
+	Redding Web 		By: Neal Barrow
+///////////////////////////////////////////////////////////// */
+* {
+	outline: none;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: small Verdana, sans-serif;
+	background: #F7F7F7 url(images/layout/bg_body.jpg);
+	color: #363636;
+}
+
+@font-face
+{
+font-family: gnuolane;
+src: url('../fonts/gnuolane_rg.ttf'),
+     url('../fonts/gnuolane_rg.eot'); /* IE9 */
+} 
+
+body, h1, h2, h3, h4, h5, h6, p, ul, li, dl, dt, dd, input, form, fieldset, label {padding: 0;margin: 0}
+ul, li, dl, dt, dd {list-style: none}
+
+img {border: none;}
+p {margin: 0 0 1.5em 0; line-height: 1.5em}
+
+/* ///////////////////////////////////////////////////////////
+	Links
+///////////////////////////////////////////////////////////// */
+a:link, a:visited {color: #125DA1}
+a:hover {color: #002F5E;}
+a {outline: none;}
+:focus {-moz-outline-style: none;}
+
+/* ///////////////////////////////////////////////////////////
+	h1, h2, h3, h4, h5, h6
+///////////////////////////////////////////////////////////// */
+h1, h2, h3, h4, h5, h6 {
+	font-family: Verdana, sans-serif;
+}
+	
+/* ///////////////////////////////////////////////////////////
+	Clearfix
+///////////////////////////////////////////////////////////// */
+.clear {
+	clear: both;
+}
+.clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+	
+/* ///////////////////////////////////////////////////////////
+	Header
+///////////////////////////////////////////////////////////// */
+#header_outer {
+	background: #0C446D;
+}
+
+#header {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 23px 0 0 0;
+}
+#header .logo {
+	width: 323px;
+	height: 84px;
+	float: left;
+}
+
+#header .logo a {
+	margin: 0 0 20px 0;
+}
+
+@media screen and (max-width: 925px) { 
+	
+	#header .logo {
+		margin: 0 auto 20px auto;
+		float: none;
+	}
+
+}
+
+#header .logo a {
+	background: url(../images/layout/logo.gif) 0 0 no-repeat;
+	width: 323px;
+	height: 84px;
+	text-indent: -9999px;
+	float: left;
+	display: block;
+}
+
+/* ///////////////////////////////////////////////////////////
+	Nav
+///////////////////////////////////////////////////////////// */
+#header ul.nav {
+	float: right;
+	margin: 20px 0 5px 0;
+
+
+	li {
+		float: left;
+	
+		a {
+			color: #FFF;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 14px;
+			display: block;
+			padding: 10px 15px;
+			margin: 0 5px 0 0;
+			-webkit-border-radius: 20px;
+			-moz-border-radius: 20px;
+			border-radius: 20px;
+		
+			$:hover {
+				background: #082d47;
+				}
+		}
+
+		a.active {
+			border: 3px solid #09395d;
+			-webkit-border-radius: 20px;
+			-moz-border-radius: 20px;
+			border-radius: 20px;
+			background: #86C23B;
+		}
+	}
+}
+
+#header a#pull {  
+    display: none;  
+}
+
+@media screen and (max-width: 925px) { 
+	
+#header ul.nav {   
+ 		border-top: 1px solid #0B3C60;
+ 		border-bottom: 1px solid #0B3C60;
+		background: #0A3B5F;
+        width: 100%;   
+		padding: 0;
+		margin: 0;
+    }  
+#header ul.nav li {  
+        width: 50%;  
+        float: left;  
+        position: relative;
+		border-radius: none; 
+		padding: 0;
+		margin: 0;
+    }  
+
+#header ul.nav li a {
+		color: #FFF;
+		text-align: left;  
+		padding: 5px 8px;
+		margin: 0;
+		text-decoration: none;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+	}
+#header ul.nav a:hover {
+		background: #082d47;
+		border: none;
+    } 
+
+#header ul.nav li a.active {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	padding: 5px 8px;
+	margin: 0;
+	border: none;
+}
+
+#header a#pull {  
+    	color: #FFF;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 14px;
+		display: none;
+		padding: 10px 8px; 
+	}
+}
+
+@media only screen and (max-width : 480px) { 
+	 
+#header ul.nav {  
+        border-bottom: 0; 
+		width: 100%;
+    }  
+#header ul.nav {  
+        display: none;  
+        height: auto;  
+    }  
+#header a#pull {  
+        display: block;  
+        background-color: #0B3C60;  
+        width: 100%;  
+        position: relative; 
+		clear: both;
+    }  
+#header a#pull:after {  
+        content:"";  
+        background: url(../images/layout/nav-icon.png) no-repeat;  
+        width: 30px;  
+        height: 30px;  
+        display: inline-block;  
+        position: absolute;  
+        right: 15px;  
+        top: 10px; 
+		padding: 10px 0;
+    }  
+}
+
+@media only screen and (max-width : 320px) {  
+	
+	#header .nav li {  
+        display: block;  
+        float: none;  
+        width: 100%;  
+    }  
+	#header .nav li a {  
+        border-bottom: 1px solid #576979;  
+    }  
+}       
+
+/* ///////////////////////////////////////////////////////////
+	Secondary Header
+///////////////////////////////////////////////////////////// */
+#sec_header_outer {
+	background: url(../images/layout/bg_wood.jpg);	
+}
+
+#sec_header {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 28px 20px;
+	color: #FFF;
+	text-align: center;
+}
+
+#sec_header h1 {
+	font-size: 45px;
+	font-family: gnuolane;
+	margin: 0 0 15px 0;
+}
+
+#sec_header h2 {
+	font-size: 20px;
+	font-weight: normal;
+}
+
+/* ///////////////////////////////////////////////////////////
+	Home - Choose Your Website
+///////////////////////////////////////////////////////////// */
+#choose_website_outer {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+#choose_website_outer h2 {
+	text-align: center;
+	margin: 0 auto 20px auto;
+	font-family: gnuolane;
+	font-size: 50px;
+}
+
+#choose_website_outer h3 {
+	text-align: center;
+	color: #6D6D6D;
+	font-size: 16px;
+	margin: 0 0 30px 0;
+	padding: 0 20px;
+	font-weight: normal;
+	line-height: 30px;
+}
+
+#choose_website div {
+	margin: 0 25px 20px 0;
+	padding: 0;
+	text-align: center;
+	color: #6D6D6D;
+	width: 300px;
+	float: left;
+}
+
+#choose_website h3 a {
+	width: 192px;
+	height: 206px;
+	display: block;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+#choose_website .small h3 a {
+	background: url(../images/layout/pkg_small.gif) 0 0 no-repeat;	
+}
+
+#choose_website .medium h3 a {
+	background: url(../images/layout/pkg_medium.gif) 0 0 no-repeat;	
+}
+
+#choose_website .large h3 a {
+	background: url(../images/layout/pkg_large.gif) 0 0 no-repeat;	
+}
+
+#choose_website .small h3 a:hover,
+#choose_website .medium h3 a:hover,
+#choose_website .large h3 a:hover {
+	background-position: 0 -206px;	
+}
+
+#choose_website img {
+	margin: 0 0 20px 0;
+}
+
+#choose_website div.large {
+	margin-right: 0;
+}
+
+#choose_website div p {
+	padding: 0 15px;
+}
+
+#choose_website div h3 {
+	text-indent: -9999px;
+}
+
+#choose_website div h4 {
+	font-size: 38px;
+	text-transform: uppercase;
+	margin: 0 0 30px 0;
+}
+
+#choose_website div .learn_more a {
+	background: url(../images/layout/pkg_learn_more.gif) 0 0 no-repeat;
+	width: 154px;
+	height: 41px;
+	display: block;
+	margin: 0 auto;
+	text-indent: -9999px;
+}
+
+/* ///////////////////////////////////////////////////////////
+	Home - Testimonials
+///////////////////////////////////////////////////////////// */
+#testimonials_outer {
+	background: #13A89E;
+	border-top: 3px solid #0d8c83;
+	border-bottom: 3px solid #0d8c83;
+	padding: 30px 0;
+	position: relative;	
+}
+
+#testimonials_outer h2 {
+	font-family: gnuolane;
+	color: #FFF;
+	font-size: 50px;
+	margin: 0 0 15px 0;
+	text-align: center;
+	font-weight: normal;
+}
+
+#testimonials_outer a {
+	width: 35px;
+	height: 112px;
+	overflow: hidden;
+	position: absolute;
+	top: 120px;
+	text-indent: -9999px;	
+}
+
+#testimonials_outer a.previous {
+	background: url(../images/layout/test_arrow_left.gif) 0 0 no-repeat;
+	left: 0;	
+}
+
+#testimonials_outer a.next {
+	background: url(../images/layout/test_arrow_right.gif) 0 0 no-repeat;	
+	right: 0;
+}
+
+#testimonials_outer a.previous:hover,
+#testimonials_outer a.next:hover {
+	background-position: 0 -112px;	
+}
+
+#testimonials {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 28px 0;
+	color: #FFF;
+	text-align: center;
+}
+
+#testimonials p.testimonial {
+	font-size: 24px;
+	font-family: Times, serif;
+	line-height: 35px;
+	margin: 0 0 40px 0;
+}
+
+#testimonials p.name {
+	font-size:  16px;
+	margin: 0;
+}
+
+/* ///////////////////////////////////////////////////////////
+	Home - Our Clients
+///////////////////////////////////////////////////////////// */
+#our_clients_outer {
+	background: url(../images/layout/bg_wood.jpg);	
+}
+
+#our_clients {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 28px 0;
+	color: #FFF;
+	text-align: center;
+}
+
+#our_clients h2 {
+	font-family: gnuolane;
+	color: #FFF;
+	font-size: 50px;
+	margin: 0 0 25px 0;
+	text-align: center;
+	font-weight: normal;
+}
+
+#our_clients p  {
+	font-size: 16px;
+	line-height: 25px;
+	margin: 0 0 35px 0;
+	text-align: center;
+}
+
+#our_clients p a {
+	color: #FFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#our_clients p a:hover {
+	text-decoration: underline;
+}
+
+#our_clients ul li {
+	float: left;
+	margin: 0 66px 20px 0;
+}
+
+/* ///////////////////////////////////////////////////////////
+	Tabs
+///////////////////////////////////////////////////////////// */
+#tabs_outer {
+	background: #0A385A;
+}
+
+#tabs {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+#tabs ul {
+	float: left;
+}
+
+#tabs ul li {
+	float: left;
+}
+
+#tabs ul li a {
+	color: #FFF;
+	text-decoration: none;
+	padding: 5px 10px;
+	display: block;
+}
+
+/* ///////////////////////////////////////////////////////////
+	Secondary Pages
+///////////////////////////////////////////////////////////// */
+#sec_content {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+#sec_content  h1{
+	font∂ƒ
+}
+
+
+/* ///////////////////////////////////////////////////////////
+	Footer
+///////////////////////////////////////////////////////////// */
+#footer_outer {
+	clear: both;
+	background: #0C446D;
+}
+
+#footer {
+	max-width: 960px;
+	position: relative;
+	margin: 0 auto;
+	font-size: 11px;
+	color: #FFF;
+	padding: 15px 0;
+}
+
+#footer .copy {
+	float: right;
+	background: url(../images/layout/footer_logo.gif) 0 0 no-repeat;
+	padding: 5px 0 5px 35px;
+}
+
+#footer ul.nav {
+	float: left;
+	overflow: hidden;
+	padding: 5px 0 0 0;
+}
+
+#footer ul.nav li {
+	float: left;
+	padding: 0 0 0 8px;
+}
+
+#footer ul.nav li a {
+	color: #FFF;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+/* ///////////////////////////////////////////////////////////
+	Maintenance
+///////////////////////////////////////////////////////////// */
+body.maintenance-page {
+	background: #0C446D;
+}
+
+body.maintenance-page #container {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 100px 0 0 0;
+}
+
+body.maintenance-page #container .logo img {
+	max-width: 323px;
+	height: auto;
+	display: block;
+	margin: 0 auto 25px auto;
+}
+
+body.maintenance-page #container .text {
+	clear: both;
+	color: #FFF;
+	font-size: 16px;
+	text-align: center;
+	line-height: 30px;
+}
